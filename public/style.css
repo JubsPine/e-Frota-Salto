@@ -1,0 +1,62 @@
+body {
+  background: #0000FF;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-acessar {
+  background-color: #FF8C00;
+  color: white;
+  font-size: 0.9rem;
+  border: 1px solid black;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-acessar:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  box-shadow: 2px 2px 0 black;
+}
+
+.btn-cadastro {
+  background-color: #77b742;
+  color: white;
+  font-size: 0.9rem;
+  border: 1px solid black;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cadastro:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  box-shadow: 2px 2px 0 black;
+}
+
+.card-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+}
+
+main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.navbar .nav-link {
+  font-size: 0.8rem;
+}
+
+.card {
+  background-color: #fff;
+}

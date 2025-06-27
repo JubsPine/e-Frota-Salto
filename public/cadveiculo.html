@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Veículo | e-Frota Salto</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <span class="text-white">e-Frota Salto</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav" href="index.html">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuNav">
+      <ul id="links" class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link courier-font" href="cadveiculo.html">Cadastro de Veículos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link courier-font" href="solicitacao.html">Solicitação de Uso</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO CENTRALIZADO -->
+  <main class="flex-fill espacamento">
+    <section class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="card-form">
+            <h4 class="text-center mb-4">Cadastro de Veículo</h4>
+            <form id="form-cadastro">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="data-cad">Data de Cadastro</label>
+                  <input type="date" class="form-control" id="data-cad" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="matricula">Matrícula</label>
+                  <input type="text" class="form-control" id="matricula" maxlength="5" pattern="\\d{5}" placeholder="Ex: 12345" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="responsavel-cad">Responsavel pelo Cadastro</label>
+                  <input type="text" class="form-control" id="responsavel-cad" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="funcao">Função</label>
+                  <input type="text" class="form-control" id="funcao" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="placa" placeholder="Ex: SAL 2025">Placa</label>
+                  <input type="text" class="form-control" id="placa" maxlength="7" pattern="\\d{7}" placeholder="Ex: SAL 2025" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="tipo-veiculo">Tipo do Veículo</label>
+                  <select class="form-control" id="tipo-veiculo" required>
+                    <option value="">Selecione</option>
+                    <option value="Ambulância">Ambulância</option>
+                    <option value="Boxer">Boxer</option>
+                    <option value="Caminhão">Caminhão</option>
+                    <option value="Caminhoneta">Caminhoneta</option>
+                    <option value="Carro">Carro</option>
+                    <option value="Citroen">Citroen</option>
+                    <option value="Doblo">Doblo</option>
+                    <option value="Furgão">Furgão</option>
+                    <option value="Gol">Gol</option>
+                    <option value="Kombi">Kombi</option>
+                    <option value="Master">Master</option>
+                    <option value="Micro Ônibus">Micro Ônibus</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Moto">Moto</option>
+                    <option value="Motoniveladora">Motoniveladora</option>
+                    <option value="Ônibus">Ônibus</option>
+                    <option value="Pá Carregadeira">Pá Carregadeira</option>
+                    <option value="Partner">Partner</option>
+                    <option value="Polo">Polo</option>
+                    <option value="Retroescavadeira">Retroescavadeira</option>
+                    <option value="S10">S10</option>
+                    <option value="Saveiro">Saveiro</option>
+                    <option value="Spin">Spin</option>
+                    <option value="Sprinter">Sprinter</option>
+                    <option value="Strada">Strada</option>
+                    <option value="Topic">Topic</option>
+                    <option value="Trator">Trator</option>
+                    <option value="Uno">Uno</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="marca" placeholder="Ex: Fiat">Marca</label>
+                  <input type="text" class="form-control" id="marca" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="modelo">Modelo</label>
+                  <input type="text" class="form-control" id="modelo" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="fab-ano">Ano Fabricação</label>
+                  <input type="number" class="form-control" id="fab-ano" min="1900" max="2026" placeholder="Ex: 2022" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="modelo-ano">Ano Modelo</label>
+                  <input type="number" class="form-control" id="modelo-ano" min="1900" max="2026" placeholder="Ex: 2022" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="chassi" placeholder="Ex: Fiat">Chassi</label>
+                  <input type="text" class="form-control" id="chassi" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="renavam">RENAVAM</label>
+                  <input type="text" class="form-control" id="renavam" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="contratante" placeholder="Ex: Fiat">Contratante</label>
+                  <select class="form-control" id="contratante" required>
+                    <option value="">Selecione</option>
+                    <option value="Sec. Ação Social">Sec. Ação Social</option>
+                    <option value="Sec. Administração">Sec. Administração</option>
+                    <option value="Sec. Cultura">Sec. Cultura</option>
+                    <option value="Sec. Defesa Social">Sec. Defesa Social</option>
+                    <option value="Sec. Educação">Sec. Educação</option>
+                    <option value="Sec. Esportes">Sec. Esportes</option>
+                    <option value="Sec. Finaças">Sec. Finaças</option>
+                    <option value="Sec. Gabinete">Sec. Gabinete</option>
+                    <option value="Sec. Governo">Sec. Governo</option>
+                    <option value="Sec. Jurídico">Sec. Jurídico</option>
+                    <option value="Sec. Meio Ambiente">Sec. Meio Ambiente</option>
+                    <option value="Sec. Obras">Sec. Obras</option>
+                    <option value="Sec. Saúde">Sec. Saúde</option>
+                    <option value="Sec. SDU">Sec. SDU</option>
+                    <option value="Sec. SDETTI">Sec. SDETTI</option>
+                    <option value="Sec. Turismo">Sec. Turismo</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="num-contrato">Contrato</label>
+                  <input type="text" class="form-control" id="num-contrato" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="tipo-contrato">Tipo do Contrato</label>
+                  <select class="form-control" id="tipo-contrato" required>
+                    <option value="">Selecione</option>
+                    <option value="Compra">Compra</option>
+                    <option value="Convênio">Convênio</option>
+                    <option value="Doação">Doação</option>
+                    <option value="Locação">Locação</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="proprietario">Proprietário</label>
+                  <select class="form-control" id="proprietario" required>
+                    <option value="">Selecione</option>
+                    <option value="Prefeitura">Prefeitura</option>
+                    <option value="Locadora">Locadora</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="centro-custo">Centro de Custo</label>
+                  <select class="form-control" id="centro-custo" required>
+                    <option value="">Selecione</option>
+                    <option value="CC - Ação Social">CC - Ação Social</option>
+                    <option value="CC - Administração">CC - Administração</option>
+                    <option value="CC - Cultura">CC - Cultura</option>
+                    <option value="CC - Defesa Social">CC - Defesa Social</option>
+                    <option value="CC - Educação">CC - Educação</option>
+                    <option value="CC - Esportes">CC - Esportes</option>
+                    <option value="CC - Finaças">CC - Finaças</option>
+                    <option value="CC - Gabinete">CC - Gabinete</option>
+                    <option value="CC - Governo">CC - Governo</option>
+                    <option value="CC - Jurídico">CC - Jurídico</option>
+                    <option value="CC - Meio Ambiente">CC - Meio Ambiente</option>
+                    <option value="CC - Obras">CC - Obras</option>
+                    <option value="CC - Saúde">CC - Saúde</option>
+                    <option value="CC - SDU">CC - SDU</option>
+                    <option value="CC - SDETTI">CC - SDETTI</option>
+                    <option value="CC - Turismo">CC - Turismo</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="secretaria">Secretaria de Uso</label>
+                  <select class="form-control" id="secretaria" required>
+                    <option value="">Selecione</option>
+                    <option value="Sec. Ação Social">Sec. Ação Social</option>
+                    <option value="Sec. Administração">Sec. Administração</option>
+                    <option value="Sec. Cultura">Sec. Cultura</option>
+                    <option value="Sec. Defesa Social">Sec. Defesa Social</option>
+                    <option value="Sec. Educação">Sec. Educação</option>
+                    <option value="Sec. Esportes">Sec. Esportes</option>
+                    <option value="Sec. Finaças">Sec. Finaças</option>
+                    <option value="Sec. Gabinete">Sec. Gabinete</option>
+                    <option value="Sec. Governo">Sec. Governo</option>
+                    <option value="Sec. Jurídico">Sec. Jurídico</option>
+                    <option value="Sec. Meio Ambiente">Sec. Meio Ambiente</option>
+                    <option value="Sec. Obras">Sec. Obras</option>
+                    <option value="Sec. Saúde">Sec. Saúde</option>
+                    <option value="Sec. SDU">Sec. SDU</option>
+                    <option value="Sec. SDETTI">Sec. SDETTI</option>
+                    <option value="Sec. Turismo">Sec. Turismo</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="setor">Setor de Uso</label>
+                  <select class="form-control" id="setor" required>
+                    <option value="Sec. Ação Social">Sec. Ação Social</option>
+                    <option value="Sec. Administração">Sec. Administração</option>
+                    <option value="Sec. Cultura">Sec. Cultura</option>
+                    <option value="Sec. Defesa Social">Sec. Defesa Social</option>
+                    <option value="Sec. Educação">Sec. Educação</option>
+                    <option value="Sec. Esportes">Sec. Esportes</option>
+                    <option value="Sec. Finaças">Sec. Finaças</option>
+                    <option value="Sec. Gabinete">Sec. Gabinete</option>
+                    <option value="Sec. Governo">Sec. Governo</option>
+                    <option value="Sec. Jurídico">Sec. Jurídico</option>
+                    <option value="Sec. Meio Ambiente">Sec. Meio Ambiente</option>
+                    <option value="Sec. Obras">Sec. Obras</option>
+                    <option value="Sec. Saúde">Sec. Saúde</option>
+                    <option value="Sec. SDU">Sec. SDU</option>
+                    <option value="Sec. SDETTI">Sec. SDETTI</option>
+                    <option value="Sec. Turismo">Sec. Turismo</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="monitoramento">Monitorado</label>
+                  <select class="form-control" id="monitoramento" required>
+                    <option value="">Selecione</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="odometro">Odômetro funcionando</label>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="odometro">
+                    <label class="form-check-label" for="odometro">NÃO</label>
+                  </div>                  
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="justificativa">Justificativa</label>
+                  <select class="form-control" id="justificativa" required>
+                    <option value="">Selecione</option>
+                    <option value="Não há conserto">Não há conserto</option>
+                    <option value="Envio para reparo">Envio para reparo</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row align-items-center">
+                <div class="form-group col-md-6">
+                  <label for="seguro">Seguro</label>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="seguro">
+                    <label class="form-check-label" for="seguro">SIM</label>
+                  </div> 
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="apolice">Apólice</label>
+                  <input type="number" class="form-control" id="apolice" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="vigencia">Vigência</label>
+                  <input type="time" class="form-control" id="vigencia" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="sem-parar">SEM PARAR</label>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="sem-parar">
+                    <label class="form-check-label" for="sem-parar">SIM</label>
+                  </div> 
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="tag">Nº TAG</label>
+                  <input type="number" class="form-control" id="tag" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="status-tag">Status da TAG</label>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="status-tag">
+                    <label class="form-check-label" for="status-tag">ATIVO</label>
+                  </div> 
+                </div>
+              </div>
+
+             <button class="btn btn-cadastro">Cadastrar Veículo</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center py-4 bg-dark text-white">
+    <div class="container">
+      <p class="small mb-1">Desenvolvido por Júlia Pinheiro.</p>
+      <p class="small mb-0">e-Frota Salto! © 2025 — Prefeitura da Estância de Salto.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

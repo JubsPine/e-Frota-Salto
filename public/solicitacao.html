@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitação de Uso | e-Frota Salto</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <span class="text-white">e-Frota Salto</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav" href="index.html">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuNav">
+      <ul id="links" class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link courier-font" href="cadveiculo.html">Cadastro de Veículos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link courier-font" href="solicitacao.html">Solicitação de Uso</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO CENTRALIZADO -->
+  <main class="flex-fill espacamento">
+    <section class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="card-form">
+            <h4 class="text-center mb-4">Solicitação de Uso</h4>
+            <form id="form-cadastro">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="placa">Placa</label>
+                  <input type="text" class="form-control" id="placa" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="marca">Marca / Modelo</label>
+                  <input type="text" class="form-control" id="marca" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="ano">Ano</label>
+                  <input type="number" class="form-control" id="ano" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="centro-custo">Centro de Custo</label>
+                  <input type="text" class="form-control" id="centro-custo" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="aquisicao">Aquisição</label>
+                  <select class="form-control" id="aquisicao" required>
+                    <option value="">Selecione</option>
+                    <option value="alugado">Alugado</option>
+                    <option value="comprado">Comprado</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="setor">Setor de Uso</label>
+                  <input type="text" class="form-control" id="setor" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-acessar btn-block mt-4">Cadastrar Veículo</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center py-4 bg-dark text-white mt-auto">
+    <div class="container">
+      <p class="small mb-1">Desenvolvido por Júlia Pinheiro.</p>
+      <p class="small mb-0">e-Frota Salto! © 2025 — Prefeitura da Estância de Salto.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

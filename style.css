@@ -1,0 +1,330 @@
+body {
+  background-color: #000;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.logo-navbar {
+  height: 45px;
+  image-rendering: pixelated;
+}
+
+/* HERO COM BACKGROUND */
+.hero-image {
+  background-image: url("img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.overlay-text {
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+/* EFEITO DE FADE COM SCROLL */
+.hero-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%);
+  z-index: 1;
+}
+
+.text-outline-bold {
+  color: white;
+  text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black,
+    -2px 0px 0 black,
+    2px 0px 0 black,
+    0px -2px 0 black,
+    0px 2px 0 black;
+}
+
+.text-outline-white {
+  text-shadow: 2px 2px 0 #000;
+}
+
+.pixel-img {
+  image-rendering: pixelated;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+h1, p{
+  text-shadow:
+    -3px -3px 0 black,
+    3px -3px 0 black,
+    -3px 3px 0 black,
+    3px 3px 0 black,
+    -3px 0px 0 black,
+    3px 0px 0 black,
+    0px -3px 0 black,
+    0px 3px 0 black;
+}
+
+h4 {
+  text-shadow:
+    -2px -2px 0 red,
+    2px -2px 0 red,
+    -2px 2px 0 red,
+    2px 2px 0 red,
+    -2px 0px 0 red,
+    2px 0px 0 red,
+    0px -2px 0 red,
+    0px 2px 0 red;
+}
+
+h5 {
+  text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white,
+    -2px 0px 0 white,
+    2px 0px 0 white,
+    0px -2px 0 white,
+    0px 2px 0 white;
+}
+
+#p1 {
+  text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white,
+    -2px 0px 0 white,
+    2px 0px 0 white,
+    0px -2px 0 white,
+    0px 2px 0 white;
+}
+
+.detalhe-emergencia {
+  padding: 20px 0;
+}
+
+.d-none {
+  display: none;
+}
+
+footer {
+  background-color: #343a40;
+}
+
+.card-retro {
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 420px;
+  text-align: center;
+}
+
+.card-retro img {
+  border-radius: 0;
+  image-rendering: pixelated;
+}
+
+.card-retro h5,
+.card-retro p {
+  margin: 0.5rem 0;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.card-retro:hover {
+  background-color: #111;
+  transform: scale(1.02);
+}
+
+.botao-retro {
+  display: inline-block;
+  background-color: #FFE600;
+  color: black;
+  font-size: 0.6rem;
+  padding: 10px 20px;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0 white;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.botao-retro:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  box-shadow: 3px 3px 0 black;
+  text-decoration: none;
+}
+
+/* Menu */
+.navbar .nav-link {
+  font-size: 0.7rem;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: red;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='red' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#titulo {
+    color: red;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.integrantes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.integrantes-container .label {
+  font-family: 'Press Start 2P', cursive;
+  color: red;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+  margin-bottom: 10px;
+}
+
+.integrantes-container .nomes p {
+  margin: 5px 0;
+  font-family: 'Press Start 2P', cursive;
+    color: red;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+/* Responvidade sobre */
+@media (min-width: 768px) {
+  .integrantes-container {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .integrantes-container .label,
+  .integrantes-container .nomes {
+    text-align: left;
+  }
+
+  .integrantes-container .nomes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+form input[type="radio"] {
+  position: relative;
+  z-index: 10;
+}
+
+/* Imagens do carrossel */
+.carousel-img {
+  max-width: 30%;
+  height: auto;
+  image-rendering: pixelated;
+  background-color: #000;
+  padding: 4px;
+}
+
+.carousel-item {
+  display: none;
+  z-index: 1;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item.active {
+  display: flex !important;
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Área do carrossel */
+#carrossel-container {
+  padding: 1rem;
+  background-color: #111;
+  border-radius: 12px;
+}
+
+/* Texto das legendas */
+#carrossel-container p {
+  margin-top: 0.5rem;
+  max-width: 90%;
+}
+
+/* VAI E VOL */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 80% 80%;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg fill='white' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 0L4.5 1 7 3.5 4.5 6 5.5 7l4-3.5z' transform='scale(-1,1) translate(-8,0)'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg fill='white' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l4 3.5L0 7z'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 767px) {
+  .card-retro {
+    height: auto !important;
+  }
+}
+
+/* Responsividade do carrossel */
+@media (max-width: 768px) {
+  .pixel-font {
+    font-size: 0.65rem;
+  }
+
+  .carousel-img {
+    max-width: 30%;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
